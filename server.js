@@ -8,7 +8,7 @@ const MONGO_URI = process.env.MONGO_URI;
 const app = express();
 app.use(
     cors({
-        origin: "http://localhost:5500", // Replace with your frontend's URL
+        origin: "http://localhost:5500",
     })
 );
 app.use(express.json());
