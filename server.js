@@ -6,9 +6,14 @@ import cors from "cors";
 dotenv.config();
 const MONGO_URI = process.env.MONGO_URI;
 const app = express();
+const allowedOrigins = [
+    "http://localhost:5500",
+    "https://browser-extensions-manager-mu.vercel.app",
+];
+
 app.use(
     cors({
-        origin: "http://localhost:5500",
+        origin: allowedOrigins,
     })
 );
 app.use(express.json());
